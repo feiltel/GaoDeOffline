@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-
 import com.amap.api.maps.MapView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
                         com.amap.api.maps.offlinemap.OfflineMapActivity.class));
             }
         });
+        findViewById(R.id.route).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,DriveRouteActivity.class));
+            }
+        });
+
     }
 
     @Override
